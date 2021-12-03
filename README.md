@@ -143,7 +143,7 @@ The skill will output the text classes that have been extracted for the corpus. 
 
 ```json
 {
-  "name": "textclassindex",
+  "name": "opinion-mining",
   "fields": [
     {
       "name": "id",
@@ -161,28 +161,28 @@ The skill will output the text classes that have been extracted for the corpus. 
       "fields": []
     },
     {
-      "name": "corpus",
-      "type": "Edm.String",
-      "facetable": false,
-      "filterable": false,
-      "key": false,
-      "retrievable": true,
-      "searchable": true,
-      "sortable": false,
-      "analyzer": "standard.lucene",
-      "indexAnalyzer": null,
-      "searchAnalyzer": null,
-      "synonymMaps": [],
-      "fields": []
-    },
-    {
-      "name": "textclass",
+      "name": "targets",
       "type": "Collection(Edm.ComplexType)",
       "analyzer": null,
       "synonymMaps": [],
       "fields": [
         {
-          "name": "category",
+          "name": "sentence",
+          "type": "Edm.String",
+          "facetable": false,
+          "filterable": true,
+          "key": false,
+          "retrievable": true,
+          "searchable": true,
+          "sortable": false,
+          "analyzer": "standard.lucene",
+          "indexAnalyzer": null,
+          "searchAnalyzer": null,
+          "synonymMaps": [],
+          "fields": []
+        },
+        {
+          "name": "sentiment",
           "type": "Edm.String",
           "facetable": true,
           "filterable": true,
@@ -197,13 +197,15 @@ The skill will output the text classes that have been extracted for the corpus. 
           "fields": []
         },
         {
-          "name": "confidence",
-          "type": "Edm.Double",
+          "name": "text",
+          "type": "Edm.String",
           "facetable": true,
           "filterable": true,
+          "key": false,
           "retrievable": true,
+          "searchable": true,
           "sortable": false,
-          "analyzer": null,
+          "analyzer": "standard.lucene",
           "indexAnalyzer": null,
           "searchAnalyzer": null,
           "synonymMaps": [],
@@ -211,6 +213,21 @@ The skill will output the text classes that have been extracted for the corpus. 
         }
       ]
     }
+  ],
+  "suggesters": [],
+  "scoringProfiles": [],
+  "defaultScoringProfile": "",
+  "corsOptions": null,
+  "analyzers": [],
+  "charFilters": [],
+  "tokenFilters": [],
+  "tokenizers": [],
+  "similarity": {
+    "@odata.type": "#Microsoft.Azure.Search.BM25Similarity",
+    "k1": null,
+    "b": null
+  },
+  "encryptionKey": null
 }
 ```
 
