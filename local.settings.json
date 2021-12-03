@@ -1,0 +1,9 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "COGNITIVE_SERVICES_ENDPOINT": "YOUR_COGNITIVE_SERVICES_ENDPOINT",
+    "COGNITIVE_SERVICES_API_KEY" : "YOUR_COGNITIVE_SERVICES_API_KEY"
+  }
+}
