@@ -1,0 +1,20 @@
+{
+    "values": [
+        {
+            "recordId": "e1",
+            "data":
+            {
+                "text":  "il servizio clienti è ottimo. il cibo è negativo",
+                "language" : "it"
+            }
+        },
+                {
+            "recordId": "e2",
+            "data":
+            {
+                "text":  "The food and service were unacceptable, but the concierge were nice",
+                "language": "en"
+            }
+        }
+    ]
+}
